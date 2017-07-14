@@ -1,6 +1,11 @@
 import React from 'react';
 
 class Boton extends React.Component{
+
+    showAlert() {
+        alert('Hello World');
+    }
+
     render(){
         return (
             <div className="Boton">
