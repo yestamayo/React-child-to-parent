@@ -27,6 +27,10 @@ class App extends Component {
       });
   }
 
+  triggerChildAlert(){
+      this.refs.child.showAlert();
+  }
+
   render() {
     return (
       <div className="App">
@@ -35,9 +39,10 @@ class App extends Component {
           <h2>Primer ejemplo en React</h2>
         </div>
         <br/>
-        <Boton action={this.changeTextBtn}/>
+        <Boton action={this.changeTextBtn} ref="child"/>
         <p>Estado: {this.state.text}</p>
         <p>Clicks: {this.state.count}</p>
+        <button onClick={this.triggerChildAlert.bind(this)}>Click on Parent do a func from child</button>
       </div>
     );
   }
